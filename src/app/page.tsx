@@ -1,11 +1,11 @@
-import {Home as home,ChevronLeft,ChevronRight,Ellipsis,HomeIcon,SearchCheck,Search as Busca,NotebookIcon,X,Square,Bell,Users,Minus,LibraryBig,Shuffle,SkipBack,Play,SkipForward,Repeat,Mic2,LayoutList,Laptop2,Volume,Maximize2,PictureInPicture2,SquarePlay,CircleCheck,CirclePlus,} from "lucide-react";
+import {Home as home,ChevronLeft,ChevronRight,Ellipsis,HomeIcon,SearchCheck,Search as Busca,NotebookIcon,X,Square,Bell,Users,Minus,LibraryBig,Shuffle,SkipBack,Play,SkipForward,Repeat,Mic2,LayoutList,Laptop2,Volume,Maximize2,PictureInPicture2,SquarePlay,CircleCheck,CirclePlus, Search,} from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex items-center justify-between w-screen p-2">
-        <div className="flex items-center gap-2 pl-4">
+    <div className="min-h-screen sm:h-screen flex flex-col">
+      <div className="hidden lg:flex items-center justify-between min-w-screen p-2">
+        <div className="flex items-center gap-2 pl-4 pr-4">
           <Ellipsis size={30} />
           <ChevronLeft size={30} />
           <ChevronRight size={30} />
@@ -23,21 +23,15 @@ export default function Home() {
           <Bell size={15} />
           <Users size={15} />
           <div>
-            <Image
-              className="rounded-full p-1 bg-zinc-300"
-              height={30}
-              width={30}
-              src="/profile.png"
-              alt="exemplo de foto de perfil"
-            />
+            <Image className="rounded-full p-1 bg-zinc-300" height={30} width={30} src="/profile.png" alt="exemplo de foto de perfil"/>
           </div>
           <Minus size={15} />
           <Square size={15} />
           <X />
         </div>
       </div>
-      <div className="flex flex-1 p-2">
-        <aside className="w-auto bg-zinc-950 p-1 flex flex-col items-center rounded-xl">
+      <div className="flex flex-1 md:p-2">
+        <aside className="hidden md:flex w-auto bg-zinc-950 p-1 flex-col items-center rounded-xl">
           <LibraryBig className="m-4" />
           <Image className="rounded-xl p-1.5 hover:bg-zinc-400" height={60} width={60} src="/liked-songs.jpg" alt="foto liked songs spotify"/>
           <Image className="rounded-xl p-1.5 hover:bg-zinc-400" height={60} width={60} src="/liked-songs.jpg" alt="foto liked songs spotify"/>
@@ -53,7 +47,7 @@ export default function Home() {
           <Image className="rounded-xl p-1.5 hover:bg-zinc-400" height={60} width={60} src="/liked-songs.jpg" alt="foto liked songs spotify"/>
           <Image className="rounded-xl p-1.5 hover:bg-zinc-400" height={60} width={60} src="/liked-songs.jpg" alt="foto liked songs spotify"/>
         </aside>
-        <main className=" w-screen rounded-xl p-4 mr-2 ml-2 bg-zinc-900">
+        <main className="md:rounded-xl p-2 lg:p-4 sm:mr-2 md:ml-2 bg-zinc-900">
           <div className="flex gap-2 ml-3">
             <span className="pl-3 pr-3 pt-1 pb-1 bg-zinc-200 text-black rounded-full">
               All
@@ -65,60 +59,60 @@ export default function Home() {
               Podcasts
             </span>
           </div>
-          <div className="grid grid-cols-4 gap-4 mt-6 ml-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 ml-3">
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
             <a className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors">
               <Image src="/duality.jpg" width={72} height={72} alt="capa do album Duality da banda Metallica" />
               <strong>Duality</strong>
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
+              <button className="hidden lg:flex w-12 h-12 items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-2 invisible group-hover:visible">
                 <Play />
               </button>
             </a>
@@ -129,7 +123,7 @@ export default function Home() {
             </h2>
             <span className="mt-14 mr-4 text-sm font-bold">Show All</span>
           </div>
-          <div className="grid grid-cols-7 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mt-4">
             <a className="overflow-hidden p-3 rounded-md hover:bg-white/10 transition delay-50 flex flex-col gap-2">
               <Image src="/duality.jpg" className="w-full rounded-md" width={104} height={104} alt="capa do album Duality da banda Metallica" />
               <strong className="font-semibold">Daily Mix 1</strong>
@@ -181,7 +175,7 @@ export default function Home() {
             </a>
           </div>
         </main>
-        <aside className="w-3/12 bg-zinc-950 p-5 flex flex-col float-right ml-auto rounded-xl">
+        <aside className="hidden w-3/12 bg-zinc-950 p-5 lg:flex flex-col float-right ml-auto rounded-xl">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between">
               <span className="font-bold">Duality</span>
@@ -221,50 +215,70 @@ export default function Home() {
           </div>
         </aside>
       </div>
-      <footer className="bg-black p-5 pt-1 pb-1 h-24 flex items-center justify-between">
+      <div className="sticky bottom-0 lg:relative">
+      <footer className="bg-black p-5 h-20 w-full flex items-center md:justify-between">
         <div className="flex items-center gap-3">
           <Image height={60} width={60} src="/duality.jpg" alt="foto da musica duality da banda Slipknot" />
           <div className="flex flex-col">
             <span>Duality</span>
             <span className="text-xs text-zinc-500 ml-0.5">Slipknot</span>
           </div>
-          <CircleCheck size={20} />
+          <CircleCheck size={20} className="hidden" />
         </div>
-        <div className="flex flex-col items-center gap-1 ml-44">
+        <div className="flex flex-col items-center gap-1 ml-auto md:ml-44">
           <div className="flex items-center gap-4">
-            <Shuffle size={20} className="text-zinc-200" />
-            <SkipBack size={20} className="text-zinc-200" />
-            <button className="w-8 h-8 flex items-center justify-center pl-1 rounded-full bg-white text-black ">
+            <Shuffle size={20} className="text-zinc-200 hidden md:block" />
+            <SkipBack size={20} className="text-zinc-200 hidden md:block" />
+            <CirclePlus size={25} className="flex md:hidden" />
+            <button className="w-8 h-8 flex items-center justify-center pl-1 ml-auto md:ml-0 rounded-full bg-white text-black ">
               <Play />
             </button>
-            <SkipForward size={20} className="text-zinc-200" />
-            <Repeat size={20} className="text-zinc-200" />
+            <SkipForward size={20} className="text-zinc-200 hidden md:block" />
+            <Repeat size={20} className="text-zinc-200 hidden md:block" />
           </div>
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <span className="text-xs text-zinc-500">0:31</span>
-            <div className="h-1 rounded-full w-96 bg-zinc-600">
+            <div className="hidden lg:block h-1 rounded-full w-96 bg-zinc-600">
               <div className="bg-zinc-200 w-24 h-1 rounded-full"></div>
             </div>
             <span className="text-xs text-zinc-500">3:06</span>
           </div>
         </div>
         <div>
-          <div className="flex items-center gap-2">
-            <SquarePlay size={20} />
-            <Mic2 size={20} />
-            <LayoutList size={20} />
-            <Laptop2 size={20} />
+          <div className="hidden lg:flex items-center gap-2">
+            <SquarePlay size={20}/>
+            <Mic2 size={20}/>
+            <LayoutList size={20}/>
+            <Laptop2 size={20}/>
             <div className="flex items-center gap-2">
               <Volume size={20} className="ml-1" />
-              <div className="h-1 rounded-full w-24 bg-zinc-600">
+              <div className="6h-1 rounded-full w-24 bg-zinc-600">
                 <div className="bg-zinc-200 w-10 h-1 rounded-full"></div>
               </div>
             </div>
             <PictureInPicture2 size={20} />
-            <Maximize2 size={20} />
+            <Maximize2 size={20}/>
           </div>
         </div>
       </footer>
+      <div className="md:hidden h-1 rounded-full min-w-screen bg-zinc-600">
+        <div className="bg-zinc-200 w-24 h-1 rounded-full"></div>
+      </div>
+      <div className="md:hidden pt-5 flex justify-between items-center pr-12 pl-12 pb-2 bg-black alig">
+       <div className="flex flex-col items-center">
+        <HomeIcon/>
+        <span className="font-thin">Home</span>
+       </div>
+      <div className="flex flex-col items-center">
+        <Search className="text-zinc-500"/>
+        <span className="font-thin text-zinc-500">Search</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <LibraryBig className="text-zinc-500"/>
+        <span className="font-thin text-zinc-500">Your Library</span>
+      </div>
+      </div>
+     </div>
     </div>
   );
 }
